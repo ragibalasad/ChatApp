@@ -1,0 +1,5 @@
+<?php
+include 'session.inc.php';
+include 'config.inc.php';
+$conn = mysqli_connect(HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+?>

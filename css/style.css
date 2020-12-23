@@ -1,0 +1,152 @@
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-sm-u {
+    box-shadow: 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.h-20 {
+    height: 20%;
+}
+
+.h-80 {
+    max-height: 76.5vh;
+}
+
+.bg {background-color: #57b846; color: white;}
+.header {font-size: 17px;}
+
+.border-b {border-bottom: 1px solid #ddd;}
+.border-t {border-top: 1px solid #ddd;}
+.border-r {border-right: 1px solid #eee;}
+
+.chat-form {
+    position: absolute;
+    bottom: 9%;
+}
+
+.chat-form textarea.box {
+    background-color: #f8f9fa;
+    width: 80%;
+    height: 50px;
+    float: left;
+    overflow-y: hidden;
+    border-radius: 0;
+    transition: .5s;
+} .chat-form textarea.box:focus {
+    background-color: #f2f2f2;
+}
+
+.chat-form button {
+    height: 50px;
+    width: 17.5%;
+    background-color: #57b846;
+    color: white;
+}
+
+
+.search-form input {
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    transition: .5s;
+}
+
+.search-form input:focus {
+    background-color: #efefef;
+}
+
+.chat-list {
+    width: 100%;
+    position: absolute;
+    height: 76.5%;
+    overflow-y: auto;
+}
+
+.chat-item {
+    padding: 10px 15px;
+}
+
+.active {
+    background-color: #57b84648;
+}
+
+.user-image {
+    max-width: 45px;
+    max-height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+.user-image img {
+    max-width: 100%;
+}
+
+.message-holder {
+    margin-left: 10px;
+}
+
+.user-name p {
+    font-size: 16px;
+    color: #333;
+}
+
+.last-msg p {
+    font-size: 14px;
+}
+
+.conversation {
+    position: absolute;
+    overflow-y: auto;
+    width: 95%;
+    height: 72vh;
+}
+
+.text-container {
+    padding: 5px;
+}
+
+.text-holder label {
+    font-size: 15px;
+    padding: 7px 15px;
+    border-radius: 17px;
+    /* position: absolute; */
+    margin: 0px 0;
+} 
+
+.text-holder p.date {
+    margin: 5px 10px;
+    font-size: 12px;
+}
+
+.text-container-1 .text-holder label {
+    background-color: #f8f9fa;
+    left: 0;
+    margin-right: 150px;
+}
+
+.text-container-2 {
+    text-align: right;
+}
+
+.text-container-2 .text-holder label {
+    background-color: #57b846;
+    color: white;
+    margin-left: 150px;
+    margin-right: 10px;
+}
+
+p.profile {
+    position: absolute;
+    bottom: 60px;
+    margin-left: 15px;
+} p.profile a {color: teal;}
