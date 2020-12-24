@@ -100,11 +100,11 @@ if (isset($_POST['submit'])) {
                             while ($users = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
                                 $chat_item = $users['id'];
                                 if ($user_details['id'] != $users['id']) {
-                                    $sql = "SELECT * FROM messages WHERE (sender = '$user_id' and recever = '$chat_item') or (sender = '$chat_item' and recever = '$user_id') ORDER BY id DESC LIMIT 1";
-                                    $query = mysqli_query($conn, $sql);
-                                    $result = mysqli_num_rows($query);
+                                    $sql_get_msg = "SELECT * FROM messages WHERE (sender = '$user_id' and recever = '$chat_item') or (sender = '$chat_item' and recever = '$user_id') ORDER BY id DESC LIMIT 1";
+                                    $query_get_msg = mysqli_query($conn, $sql_get_msg);
+                                    $result = mysqli_num_rows($query_get_msg);
                                     if ($result != 0) {
-                                        $msg = mysqli_fetch_array($query, MYSQLI_ASSOC); 
+                                        $msg = mysqli_fetch_array($query_get_msg, MYSQLI_ASSOC); 
                                     } else {
                                         $msg['message'] = '<i>Say hello to this contact.</i>';
                                     }
@@ -131,7 +131,7 @@ if (isset($_POST['submit'])) {
                                     echo '            </div>';
                                     echo '        </div>';
                                     echo '    </div>';
-                                    echo '</a>';
+									echo '</a>';
                                 }
                             }
                             ?>
@@ -153,10 +153,11 @@ if (isset($_POST['submit'])) {
 								</div>
 							</a> -->
 						</div>
-						<p class="profile">
+						<p class="profile w-100">
                             <a href="">
-                                <?php echo $user_details['username']; ?>
-                            </a>
+								<?php echo $user_details['username']; ?>
+							</a>
+							<a href="utils/logout.util.php" style="position: absolute; right: 30px;">Logout</a>
                         </p>
 					</div>
 					<div class="col-8 w-full p-0">
